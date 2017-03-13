@@ -1,0 +1,13 @@
+body{
+  color: blue;
+
+}
+
+#mainBody {
+  height: 1500px;
+  width: 1300px;
+  border-style: solid;
+  border-color : black;
+  border-width: 2px;
+  background-color: yellow;
+}
