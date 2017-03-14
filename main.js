@@ -36,25 +36,27 @@ $('#get-data').click(function () {
 */
 
 
+var xmlhttp = new XMLHttpRequest();
+var url = "main.json";
 
-$.ajax({
-	type: 'GET',
-	url: 'https://github.com/raxitp02/d3_Project_MetLife/blob/master/main.json',
-	async: false,
-	jsonpCallback: 'jsonCallback',
-	contentType: "application/json",
-	dataType: 'jsonp',
-	success: function(data)
-	{
-		$('#jsonp-results').html(JSON.stringify(data));
-		console.log(json);
-	},
-	error: function(e)
-	{
-	   alert(e.message);
-	}
-});
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' +
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
 /*
 
 var opsMetrics = {
