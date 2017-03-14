@@ -24,9 +24,38 @@ function loadDoc() {
   xhttp.send();
 }
 
-console.log(loadDoc);
 
+
+
+
+$('#get-data').click(function () {
+  $.getJSON('main.json', function (data) {
+    console.log(data);
+  });
+});
 */
+
+
+
+$.ajax({
+	type: 'GET',
+	url: 'https://github.com/raxitp02/d3_Project_MetLife/blob/master/main.json',
+	async: false,
+	jsonpCallback: 'jsonCallback',
+	contentType: "application/json",
+	dataType: 'jsonp',
+	success: function(data)
+	{
+		$('#jsonp-results').html(JSON.stringify(data));
+		console.log(json);
+	},
+	error: function(e)
+	{
+	   alert(e.message);
+	}
+});
+
+/*
 
 var opsMetrics = {
   "GSP":["Russia","USSD","Colombia","Vietnam","China-ADD","CAT","Banca Gulf","US/Expat","China","Turkey","Italy"],
@@ -62,3 +91,4 @@ var businessMetrics_info = {
 console.log(opsMetrics);
 console.log(businessMetrics);
 console.log(businessMetrics_info);
+*/
