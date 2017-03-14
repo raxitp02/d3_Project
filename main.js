@@ -36,27 +36,39 @@ $('#get-data').click(function () {
 */
 
 
-var xmlhttp = new XMLHttpRequest();
-var url = "main.json";
+var opsMetrics = [
+     { "GSP" : "Russia",      "systemAvailability" : "99.40%", "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 7 },
+     { "GSP" : "USSD",        "systemAvailability" : "100%",   "ProductionIncidents" : 1 ,   "Prod Incidents YTD" : 3 },
+     { "GSP" : "Colombia",    "systemAvailability" : "100%",   "ProductionIncidents" : 1 ,   "Prod Incidents YTD" : 2 },
+     { "GSP" : "Vietnam",     "systemAvailability" : "100%",   "ProductionIncidents" : 10 ,  "Prod Incidents YTD" : 148 },
+     { "GSP" : "China-ADD",   "systemAvailability" : "100%",   "ProductionIncidents" : 1 ,   "Prod Incidents YTD" : 93 },
+     { "GSP" : "CAT",         "systemAvailability" : "100%",   "ProductionIncidents" : 5 ,   "Prod Incidents YTD" : 46 },
+     { "GSP" : "Banca Gulf",  "systemAvailability" : "100%",   "ProductionIncidents" : 2 ,   "Prod Incidents YTD" : 27 },
+     { "GSP" : "US/Expat",    "systemAvailability" : "100%",   "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 6 },
+     { "GSP" : "China",       "systemAvailability" : "100%",   "ProductionIncidents" : 2 ,   "Prod Incidents YTD" : 66 },
+     { "GSP" : "Turkey",      "systemAvailability" : "100%",   "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 1 },
+     { "GSP" : "Italy",       "systemAvailability" : "99.70%", "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 2 },
 
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-};
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+               ];
 
-function myFunction(arr) {
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' +
-        arr[i].display + '</a><br>';
-    }
-    document.getElementById("id01").innerHTML = out;
-}
+
+ var businessMetrics = [
+            { "Launch TimeFrame " : "Jun-13", "Channel" : "Banca",   "GSP" : "Russia",     "Program to Date" : 345.672,  "Quotes" : 3.377,   "Apps" : 1.658, "Quote to App Conversion Rate" : "49%", "Issued Premium USD" : "$22,000",     "# Agents Using Platform" : "14.295" },
+            { "Launch TimeFrame " : "Jun-13", "Channel" : "DTC",     "GSP" : "USSD",       "Program to Date" : 195.861,  "Quotes" : 2.498,   "Apps" : 1.943, "Quote to App Conversion Rate" : "78%", "Issued Premium USD" : "$21,000",     "# Agents Using Platform" : "14.295" },
+            { "Launch TimeFrame " : "Aug-14", "Channel" : "Agency",  "GSP" : "Columbia",   "Program to Date" : 521.077,  "Quotes" : 17.318,  "Apps" : 1.330, "Quote to App Conversion Rate" : "8%",  "Issued Premium USD" : "$4,000,000",  "# Agents Using Platform" : "14.295" },
+            { "Launch TimeFrame " : "Nov-14", "Channel" : "Banca",   "GSP" : "Vietnam",    "Program to Date" : 72.754,   "Quotes" : 1.871,   "Apps" : 194,   "Quote to App Conversion Rate" : "10%", "Issued Premium USD" : "",            "# Agents Using Platform" : "14.295" },
+            { "Launch TimeFrame " : "Oct-14", "Channel" : "DTC",     "GSP" : "China-ADD",  "Program to Date" : 9.264,    "Quotes" : 531,     "Apps" : 20,    "Quote to App Conversion Rate" : "4%",  "Issued Premium USD" : "$5,000",      "# Agents Using Platform" : "14.295" },
+            { "Launch TimeFrame " : "Aug-15", "Channel" : "Group",   "GSP" : "CAT",        "Program to Date" : 507,      "Quotes" : 419,     "Apps" : 88,    "Quote to App Conversion Rate" : "21%", "Issued Premium USD" : "$0",          "# Agents Using Platform" : "14.295" },
+            { "Launch TimeFrame " : "May-16", "Channel" : "Group",   "GSP" : "Banca Gulf", "Program to Date" : 235,      "Quotes" : 14,      "Apps" : 7,     "Quote to App Conversion Rate" : "50%", "Issued Premium USD" : "$0",          "# Agents Using Platform" : "14.295" },
+                       ];
+
+ var businessMetrics_info =
+     [
+            { "Launch TimeFrame" : "Jul-14", "Channel" : "", "GSvP" : "US/Expat", "Register" : "327", "Claims" : "8617", "Docs/Forms" : "698" },
+            { "Launch TimeFrame" : "Nov-14", "Channel" : "", "GSvP" : "China",    "Register" : "N/A", "Claims" : "N/A",  "Docs/Forms" : "N/A" },
+            { "Launch TimeFrame" : "Aug-13", "Channel" : "", "GSvP" : "Turkey",   "Register" : "N/A", "Claims" : "N/A",  "Docs/Forms" : "N/A" },
+            { "Launch TimeFrame" : "Aug-13", "Channel" : "", "GSvP" : "Italy",    "Register" : "N/A", "Claims" : "N/A",  "Docs/Forms" : "1461" },
+     ];
 /*
 
 var opsMetrics = {
@@ -90,7 +102,14 @@ var businessMetrics_info = {
   "Claims":["8617","N/A","N/A","N/A"],
   "Docs/Forms":["698","N/A","N/A","1461"]
 }
-console.log(opsMetrics);
-console.log(businessMetrics);
-console.log(businessMetrics_info);
 */
+
+
+$.each(opsMetrics, function(i, item) {
+    console.log(item);
+});
+$.each(businessMetrics, function(i, item1) {
+  console.log(item1);
+});$.each(businessMetrics_info, function(i, item2) {
+    console.log(item2);
+});
