@@ -36,20 +36,29 @@ $('#get-data').click(function () {
 */
 
 
-var opsMetrics = [
-     { "GSP" : "Russia",      "systemAvailability" : "99.40%", "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 7 },
-     { "GSP" : "USSD",        "systemAvailability" : "100%",   "ProductionIncidents" : 1 ,   "Prod Incidents YTD" : 3 },
-     { "GSP" : "Colombia",    "systemAvailability" : "100%",   "ProductionIncidents" : 1 ,   "Prod Incidents YTD" : 2 },
-     { "GSP" : "Vietnam",     "systemAvailability" : "100%",   "ProductionIncidents" : 10 ,  "Prod Incidents YTD" : 148 },
-     { "GSP" : "China-ADD",   "systemAvailability" : "100%",   "ProductionIncidents" : 1 ,   "Prod Incidents YTD" : 93 },
-     { "GSP" : "CAT",         "systemAvailability" : "100%",   "ProductionIncidents" : 5 ,   "Prod Incidents YTD" : 46 },
-     { "GSP" : "Banca Gulf",  "systemAvailability" : "100%",   "ProductionIncidents" : 2 ,   "Prod Incidents YTD" : 27 },
-     { "GSP" : "US/Expat",    "systemAvailability" : "100%",   "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 6 },
-     { "GSP" : "China",       "systemAvailability" : "100%",   "ProductionIncidents" : 2 ,   "Prod Incidents YTD" : 66 },
-     { "GSP" : "Turkey",      "systemAvailability" : "100%",   "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 1 },
-     { "GSP" : "Italy",       "systemAvailability" : "99.70%", "ProductionIncidents" : 0 ,   "Prod Incidents YTD" : 2 },
+var app =  dashboard
+            .module("d3App",[])
+            .controller("myController" ,function($scope){
 
-               ];
+              var opsMetrics = [
+                   { GSP: "Russia",      systemAvailability: "99.40%", ProductionIncidents: 0 ,   ProdIncidentsYTD: 7 },
+                   { GSP: "USSD",        systemAvailability: "100%",   ProductionIncidents: 1 ,   ProdIncidentsYTD: 3 },
+                   { GSP: "Colombia",    systemAvailability: "100%",   ProductionIncidents: 1 ,   ProdIncidentsYTD: 2 },
+                   { GSP: "Vietnam",     systemAvailability: "100%",   ProductionIncidents: 10 ,  ProdIncidentsYTD: 148 },
+                   { GSP: "China-ADD",   systemAvailability: "100%",   ProductionIncidents: 1 ,   ProdIncidentsYTD: 93 },
+                   { GSP: "CAT",         systemAvailability: "100%",   ProductionIncidents: 5 ,   ProdIncidentsYTD: 46 },
+                   { GSP: "Banca Gulf",  systemAvailability: "100%",   ProductionIncidents: 2 ,   ProdIncidentsYTD: 27 },
+                   { GSP: "US/Expat",    systemAvailability: "100%",   ProductionIncidents: 0 ,   ProdIncidentsYTD: 6 },
+                   { GSP: "China",       systemAvailability: "100%",   ProductionIncidents: 2 ,   ProdIncidentsYTD: 66 },
+                   { GSP: "Turkey",      systemAvailability: "100%",   ProductionIncidents: 0 ,   ProdIncidentsYTD: 1 },
+                   { GSP: "Italy",       systemAvailability: "99.70%", ProductionIncidents: 0 ,   ProdIncidentsYTD: 2 },
+
+                             ];
+
+                             $scope.opsMetrics = opsMetrics;
+
+            });
+
 
 
  var businessMetrics = [

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
 <!-- your webpage info goes here -->
     <title>Tenanats Adoption and Metrics Dashboard</title>
@@ -16,10 +16,29 @@
 <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
 </head>
 
-<body>
-  <div id='mainBody'>
+<body ng-app = "d3App">
+  <div id='mainBody' ng-controller = "myController">
 <h1> Tenanats Adoption and Metrics Dashboard </h1>
-
+    <div id='main-table-body' ng-controller = "myController">
+          <table>
+            <thead>
+              <tr>
+                  <th> GSP </th>
+                  <th> systemAvailability </th>
+                  <th> ProductionIncidents </th>
+                  <th> ProdIncidentsYTD </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "opsMetric in opsMetrics">
+                  <td> {{ opsMetric.GSP }} </td>
+                  <td> {{ opsMetric.systemAvailability }} </td>
+                  <td> {{ opsMetric.ProductionIncidents }} </td>
+                  <td> {{ opsMetric.ProdIncidentsYTD }} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
 </div>
 
 
