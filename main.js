@@ -36,8 +36,7 @@ $('#get-data').click(function () {
 */
 
 
-var app =  dashboard
-            .module("d3App",[])
+var app =  angular.module("d3App",[])
             .controller("myController" ,function($scope){
 
               var opsMetrics = [
