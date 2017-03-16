@@ -11,3 +11,9 @@ body{
   border-width: 2px;
   background-color: yellow;
 }
+
+table, th, td {
+  border-style: solid;
+  border-color : black;
+  border-width: 2px;
+}
