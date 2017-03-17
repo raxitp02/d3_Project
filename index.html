@@ -2,14 +2,11 @@
 <html ng-app = "d3App">
 <head>
 <!-- your webpage info goes here -->
-    <title>Tenanats Adoption and Metrics Dashboard</title>
+    <title>GSSP Tenants Adoption and Metrics Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="d3.js"></script>
-    <script type="text/javascript" src="d3.min.js"></script>
-    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="angular.min.js"></script>
-    <script src="main.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> <!-- Load AngularJs CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!--LOaded jquery -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css">
@@ -18,15 +15,15 @@
 
 <body>
   <div id='mainBody'>
-<h1> Tenanats Adoption and Metrics Dashboard </h1>
+<h1> GSSP Tenants Adoption and Metrics Dashboard </h1>
     <div id='main-table-body' ng-controller = "myController">
-          <table id="table-body">
+          <table class="zui-table zui-table-zebra zui-table-horizontal">
             <thead>
               <tr>
                   <th> GSP </th>
-                  <th> systemAvailability </th>
-                  <th> ProductionIncidents </th>
-                  <th> ProdIncidentsYTD </th>
+                  <th> SystemA vailability </th>
+                  <th> Production Incidents </th>
+                  <th> ProdIncidents YTD </th>
               </tr>
             </thead>
             <tbody>
@@ -39,8 +36,82 @@
             </tbody>
           </table>
     </div>
-</div>
 
+  </br></br>
+<!--
+    <div id='main-table-body1' ng-controller = "myControllerBusiness">
+          <table id="table-body1">
+            <thead>
+              <tr>
+                  <th> LaunchTimeFrame </th>
+                  <th> Channel </th>
+                  <th> GSP </th>
+                  <th> ProgramtoDate </th>
+                  <th> Quotes </th>
+                  <th> Apps </th>
+                  <th> QuotetoAppConversionRate </th>
+                  <th> IssuedPremiumUSD </th>
+                  <th> #_Agents_Using_Platform </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "businessMetric in businessMetrics">
+                  <td> {{ businessMetric.LaunchTimeFrame }} </td>
+                  <td> {{ businessMetric.Channel }} </td>
+                  <td> {{ businessMetric.GSP }} </td>
+                  <td> {{ businessMetric.ProgramtoDate }} </td>
+                  <td> {{ businessMetric.Quotes }} </td>
+                  <td> {{ businessMetric.Apps }} </td>
+                  <td> {{ businessMetric.QuotetoAppConversionRate }} </td>
+                  <td> {{ businessMetric.IssuedPremiumUSD }} </td>
+                  <td> {{ businessMetric.#_Agents_Using_Platform }} </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+    </div>
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myControllerBusiness', function($scope, $http) {
+      $http({
+        method : "GET",
+        url : "businessMetrics.json"
+      }).then(function mySucces(response) {
+          $scope.myWelcome = response.data;
+        }, function myError(response) {
+          $scope.myWelcome = response.statusText;
+      });
+    });
+    </script>
+
+    <div id='main-table-body2' ng-controller = "myControllerBusinessInfo">
+          <table id="table-body">
+            <thead>
+              <tr>
+                  <th> LaunchTimeFrame </th>
+                  <th> Channel </th>
+                  <th> GSvP </th>
+                  <th> Register </th>
+                  <th> Claims </th>
+                  <th> Docs/Forms </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "businessMetrics_infom in businessMetrics_info">
+                  <td> {{ businessMetrics_infom.LaunchTimeFrame }} </td>
+                  <td> {{ businessMetrics_infom.Channel }} </td>
+                  <td> {{ businessMetrics_infom.GSvP }} </td>
+                  <td> {{ businessMetrics_infom.Register }} </td>
+                  <td> {{ businessMetrics_infom.Claims }} </td>
+                  <td> {{ businessMetrics_infom.Docs/Forms }} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+-->
+</div>
 
 <script src="main.js"></script>
 </body>
