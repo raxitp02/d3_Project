@@ -1,4 +1,4 @@
-[
+var opsMetrics =[
   {
     "GSP": "Russia",
     "System Availability": "99.40%",

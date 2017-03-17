@@ -22,13 +22,15 @@ var app =  angular.module("d3App",[]);
 
 
 
+
 /*
+
 
 
 var app = angular.module('d3App', []);
 app.controller('myController',['$scope','$http', function($scope, $http) {
-    $http.get("opsMetrics.json").success(function(data){
-      $scope.opsMetric = data;
+    $http.get("opsMetrics.json").success(function(opsMetrics){
+       $scope.opsMetrics = opsMetrics;
     });
 
 }]);
