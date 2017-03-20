@@ -100,75 +100,8 @@
     </div>
 </div>
  
-<!--
-    <div id='main-table-body1' ng-controller = "myControllerBusiness">
-          <table id="table-body1">
-            <thead>
-              <tr>
-                  <th> LaunchTimeFrame </th>
-                  <th> Channel </th>
-                  <th> GSP </th>
-                  <th> ProgramtoDate </th>
-                  <th> Quotes </th>
-                  <th> Apps </th>
-                  <th> QuotetoAppConversionRate </th>
-                  <th> IssuedPremiumUSD </th>
-                  <th> #_Agents_Using_Platform </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat = "businessMetric in businessMetrics">
-                  <td> {{ businessMetric.LaunchTimeFrame }} </td>
-                  <td> {{ businessMetric.Channel }} </td>
-                  <td> {{ businessMetric.GSP }} </td>
-                  <td> {{ businessMetric.ProgramtoDate }} </td>
-                  <td> {{ businessMetric.Quotes }} </td>
-                  <td> {{ businessMetric.Apps }} </td>
-                  <td> {{ businessMetric.QuotetoAppConversionRate }} </td>
-                  <td> {{ businessMetric.IssuedPremiumUSD }} </td>
-                  <td> {{ businessMetric.#_Agents_Using_Platform }} </td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-    <script>
-    var app = angular.module('myApp', []);
-    app.controller('myControllerBusiness', function($scope, $http) {
-      $http({
-        method : "GET",
-        url : "businessMetrics.json"
-      }).then(function mySucces(response) {
-          $scope.myWelcome = response.data;
-        }, function myError(response) {
-          $scope.myWelcome = response.statusText;
-      });
-    });
-    </script>
-    <div id='main-table-body2' ng-controller = "myControllerBusinessInfo">
-          <table id="table-body">
-            <thead>
-              <tr>
-                  <th> LaunchTimeFrame </th>
-                  <th> Channel </th>
-                  <th> GSvP </th>
-                  <th> Register </th>
-                  <th> Claims </th>
-                  <th> Docs/Forms </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat = "businessMetrics_infom in businessMetrics_info">
-                  <td> {{ businessMetrics_infom.LaunchTimeFrame }} </td>
-                  <td> {{ businessMetrics_infom.Channel }} </td>
-                  <td> {{ businessMetrics_infom.GSvP }} </td>
-                  <td> {{ businessMetrics_infom.Register }} </td>
-                  <td> {{ businessMetrics_infom.Claims }} </td>
-                  <td> {{ businessMetrics_infom.Docs/Forms }} </td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
--->
+
+
 </div>
 
 <script src="main.js"></script>
