@@ -1,68 +1,58 @@
-[
-  {
-    "GSP": "Russia",
-    "System Availability": "99.40%",
-    "Production Incidents": 0,
-    "Prod Incidents YTD": 7
-  },
-  {
-    "GSP": "USSD",
-    "System Availability": "100%",
-    "Production Incidents": 1,
-    "Prod Incidents YTD": 3
-  },
-  {
-    "GSP": "Colombia",
-    "System Availability": "100%",
-    "Production Incidents": 1,
-    "Prod Incidents YTD": 2
-  },
-  {
-    "GSP": "Vietnam",
-    "System Availability": "100%",
-    "Production Incidents": 10,
-    "Prod Incidents YTD": 148
-  },
-  {
-    "GSP": "China-ADD",
-    "System Availability": "100%",
-    "Production Incidents": 1,
-    "Prod Incidents YTD": 93
-  },
-  {
-    "GSP": "CAT",
-    "System Availability": "100%",
-    "Production Incidents": 5,
-    "Prod Incidents YTD": 46
-  },
-  {
-    "GSP": "Banca Gulf",
-    "System Availability": "100%",
-    "Production Incidents": 2,
-    "Prod Incidents YTD": 27
-  },
-  {
-    "GSP": "US/Expat",
-    "System Availability": "100%",
-    "Production Incidents": 0,
-    "Prod Incidents YTD": 6
-  },
-  {
-    "GSP": "China",
-    "System Availability": "100%",
-    "Production Incidents": 2,
-    "Prod Incidents YTD": 66
-  },
-  {
-    "GSP": "Turkey",
-    "System Availability": "100%",
-    "Production Incidents": 0,
-    "Prod Incidents YTD": 1
-  },
-  {
-    "GSP": "Italy",
-    "System Availability": "99.70%",
-    "Production Incidents": 0,
-    "Prod Incidents YTD": 2
-  }
-]
+[{
+  "opsGSP": "Russia",
+  "SystemAvailability": "99.40%",
+  "ProductionIncidents": 0,
+  "ProdIncidentsYTD": 7
+}, {
+  "opsGSP": "USSD",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 1,
+  "ProdIncidentsYTD": 3
+}, {
+  "opsGSP": "Colombia",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 1,
+  "ProdIncidentsYTD": 2
+}, {
+  "opsGSP": "Vietnam",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 10,
+  "ProdIncidentsYTD": 148
+}, {
+  "opsGSP": "China-ADD",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 1,
+  "ProdIncidentsYTD": 93
+}, {
+  "opsGSP": "CAT",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 5,
+  "ProdIncidentsYTD": 46
+}, {
+  "opsGSP": "Banca Gulf",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 2,
+  "ProdIncidentsYTD": 27
+}, {
+  "opsGSP": "US/Expat",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 0,
+  "ProdIncidentsYTD": 6
+}, {
+  "opsGSP": "China",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 2,
+  "ProdIncidentsYTD": 66
+}, {
+  "opsGSP": "Turkey",
+  "SystemAvailability": "100%",
+  "ProductionIncidents": 0,
+  "ProdIncidentsYTD": 1
+}, {
+  "opsGSP": "Italy",
+  "SystemAvailability": "99.70%",
+  "ProductionIncidents": 0,
+  "ProdIncidentsYTD": 2
+}]
+
+

@@ -16,8 +16,9 @@
 <body>
   <div id='mainBody'>
 <h1> GSSP Tenants Adoption and Metrics Dashboard </h1>
-    <div id='main-table-body' ng-controller = "myController">
-          <table class="zui-table zui-table-zebra zui-table-horizontal">
+<div ng-controller = "myController">
+    <div id='main-table-body' class = "table-main-div-body" >
+          <table id="table-body" class="zui-table zui-table-zebra zui-table-horizontal">
             <thead>
               <tr>
                   <th> GSP </th>
@@ -27,9 +28,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat = "opsMetric in opsMetrics">
-                  <td> {{ opsMetric.GSP }} </td>
-                  <td> {{ opsMetric.systemAvailability }} </td>
+              <tr ng-repeat = "opsMetric in data">
+                  <td> {{ opsMetric.opsGSP }} </td>
+                  <td> {{ opsMetric.SystemAvailability }} </td>
                   <td> {{ opsMetric.ProductionIncidents }} </td>
                   <td> {{ opsMetric.ProdIncidentsYTD }} </td>
               </tr>
@@ -37,7 +38,68 @@
           </table>
     </div>
 
-  </br></br>
+ </br></br>
+<!-- Created Business Metrics Table-->
+  
+    <div id='main-table-body1' class = "table-main-div-body">
+          <table id="table-body1" class="zui-table zui-table-zebra zui-table-horizontal">
+            <thead>
+              <tr>
+                  <th> LaunchTime Frame </th>
+                  <th> Channel </th>
+                  <th> GSP </th>
+                  <th> ProgramtoDate </th>
+                  <th> Quotes </th>
+                  <th> Apps </th>
+                  <th> QuotetoAppConversionRate </th>
+                  <th> IssuedPremiumUSD </th>
+                  <th> #_Agents_Using_Platform </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "businessMetric in data1">
+                  <td> {{ businessMetric.Launch_TimeFrame }} </td>
+                  <td> {{ businessMetric.Channel}} </td>
+                  <td> {{ businessMetric.GSP }} </td>
+                  <td> {{ businessMetric.Program_to_Date }} </td>
+                  <td> {{ businessMetric.Quotes }} </td>
+                  <td> {{ businessMetric.Apps }} </td>
+                  <td> {{ businessMetric.Quote_to_App_Conversion_Rate }} </td>
+                  <td> {{ businessMetric.Issued_Premium_USD }} </td>
+                  <td> {{ businessMetric.Agents_Using_Platform }} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    </br></br>
+<!-- Created Business Metrics Table2-->
+    <div id='main-table-body2' class = "table-main-div-body">
+          <table id="table-body2" class="zui-table zui-table-zebra zui-table-horizontal">
+            <thead>
+              <tr>
+                  <th> LaunchTimeFrame </th>
+                  <th> Channel </th>
+                  <th> GSvP </th>
+                  <th> Register </th>
+                  <th> Claims </th>
+                  <th> Docs/Forms </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "businessMetrics_infom in data2">
+                  <td> {{ businessMetrics_infom.Launch_TimeFrame_info }} </td>
+                  <td> {{ businessMetrics_infom.Channel_info }} </td>
+                  <td> {{ businessMetrics_infom.GSvP }} </td>
+                  <td> {{ businessMetrics_infom.Register_info }} </td>
+                  <td> {{ businessMetrics_infom.Claims_info }} </td>
+                  <td> {{ businessMetrics_infom.Docs/Forms }} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+ 
 <!--
     <div id='main-table-body1' ng-controller = "myControllerBusiness">
           <table id="table-body1">
@@ -68,10 +130,7 @@
               </tr>
             </tbody>
           </table>
-
-
     </div>
-
     <script>
     var app = angular.module('myApp', []);
     app.controller('myControllerBusiness', function($scope, $http) {
@@ -85,7 +144,6 @@
       });
     });
     </script>
-
     <div id='main-table-body2' ng-controller = "myControllerBusinessInfo">
           <table id="table-body">
             <thead>

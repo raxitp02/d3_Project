@@ -1,29 +1,41 @@
 
 
-angular.module('d3App',[])
+var app1 = angular.module('d3App',[])
         .controller('myController', function($scope,$http){
           $scope.data = [];
           $http.get('opsMetrics.json').success(function(resp){
             $scope.data = resp;
             console.log($scope.data);
           });
+          $http.get('businessMetrics.json').success(function(resp1){
+            $scope.data1 = resp1;
+            console.log($scope.data1);
+             });
+          $http.get('businessMetrics_info.json').success(function(resp2){
+            $scope.data2 = resp2;
+            console.log($scope.data2);
+             });
         });
 
 /*
+var app = angular.module('d3App',[])
+        .controller('myController', function($scope,$http){
+          $scope.data1 = [];
+          $http.get('businessMetrics.json').success(function(resp1){
+            $scope.data1 = resp1;
+            console.log($scope.data1);
+          });
+        });
+
 
 var app = angular.module('d3App', []);
 app.controller('myController',['$scope','$http', function($scope, $http) {
     $http.get("opsMetrics.json").success(function(opsMetrics){
        $scope.opsMetrics = opsMetrics;
     });
-
 }]);
-
-
-
 var app =  angular.module("d3App",[]);
             app.controller("myController" ,function($scope){
-
               var opsMetrics = [
                    { 'GSP': "Russia",      'systemAvailability': "99.40%", 'ProductionIncidents': 0 ,   'ProdIncidentsYTD': 7 },
                    { 'GSP': "USSD",        'systemAvailability': "100%",   'ProductionIncidents': 1 ,   'ProdIncidentsYTD': 3 },
@@ -36,15 +48,9 @@ var app =  angular.module("d3App",[]);
                    { 'GSP': "China",       'systemAvailability': "100%",   'ProductionIncidents': 2 ,   'ProdIncidentsYTD': 66 },
                    { 'GSP': "Turkey",      'systemAvailability': "100%",   'ProductionIncidents': 0 ,   'ProdIncidentsYTD': 1 },
                    { 'GSP': "Italy",       'systemAvailability': "99.70%", 'ProductionIncidents': 0 ,   'ProdIncidentsYTD': 2 },
-
                              ];
-
                              $scope.opsMetrics = opsMetrics;
-
             });
-
-
-
 var appBusiness =  angular.module("d3App",[]);
             appBusiness.controller("myControllerBusiness" ,function($scope){
             var businessMetrics = [
@@ -58,9 +64,6 @@ var appBusiness =  angular.module("d3App",[]);
                                 ];
                         $scope.businessMetrics = businessMetrics;
                 });
-
-
-
 var appBusinessInfo =  angular.module("d3App",[])
                         .controller("myControllerBusinessInfo" ,function($scope){
             var businessMetrics_info =
@@ -69,23 +72,16 @@ var appBusinessInfo =  angular.module("d3App",[])
                        { 'LaunchTimeFrame' : ‘Nov-14’, 'Channel' : ‘‘, 'GSvP' : ‘China’,    'Register' : ‘N/A’, 'Claims' : ‘N/A’,  'Docs/Forms' : ‘N/A’ },
                        { 'LaunchTimeFrame' : ‘Aug-13’, 'Channel' : ‘‘, 'GSvP' : ‘Turkey’,   'Register' : ‘N/A’, 'Claims' : ‘N/A’,  'Docs/Forms' : ‘N/A’ },
                        { 'LaunchTimeFrame' : ‘Aug-13’, 'Channel' : ‘‘, 'GSvP' : ‘Italy’,    'Register' : ‘N/A’, 'Claims' : ‘N/A’,  'Docs/Forms' : ‘1461’ },
-
                           $scope.businessMetrics_infom = businessMetrics_info;
                 ];
-
 /*
-
 var opsMetrics = {
   "GSP":["Russia","USSD","Colombia","Vietnam","China-ADD","CAT","Banca Gulf","US/Expat","China","Turkey","Italy"],
   "System Availability":["99.40%","100%","100%","100%","100%","100%","100%","100%","100%","100%","99.70%"],
   "Production Incidents":[0,1,1,10,1,5,2,0,2,0,0],
   "Prod Incidents YTD":[7,3,2,148,93,46,27,6,66,1,2]
 }
-
 //Business Metrics Json data
-
-
-
 var businessMetrics = {
   "Launch TimeFrame":["Jun-13","Jun-13","Aug-14","Nov-14","Oct-14","Aug-15","May-16"],
   "Channel":["Banca","DTC","Agency","Banca","DTC","Group","Group"],
@@ -97,7 +93,6 @@ var businessMetrics = {
   "Issued Premium USD":["$22,000","$21,000","$4,000,000","","$5,000","$0","$0"],
   "# Agents Using Platform":["14.295","305","2.223","3.058","**","4.640","40"]
 }
-
 var businessMetrics_info = {
   "Launch TimeFrame":["Jul-14","Nov-14","Aug-13","Aug-13"],
   "Channel":[0,0,0,0],
@@ -106,9 +101,6 @@ var businessMetrics_info = {
   "Claims":["8617","N/A","N/A","N/A"],
   "Docs/Forms":["698","N/A","N/A","1461"]
 }
-
-
-
 $.each(opsMetrics, function(i, item) {
     console.log(item);
 });
