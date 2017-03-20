@@ -1,3 +1,26 @@
+
+
+angular.module('d3App',[])
+        .controller('myController', function($scope,$http){
+          $scope.data = [];
+          $http.get('opsMetrics.json').success(function(resp){
+            $scope.data = resp;
+            console.log($scope.data);
+          });
+        });
+
+/*
+
+var app = angular.module('d3App', []);
+app.controller('myController',['$scope','$http', function($scope, $http) {
+    $http.get("opsMetrics.json").success(function(opsMetrics){
+       $scope.opsMetrics = opsMetrics;
+    });
+
+}]);
+
+
+
 var app =  angular.module("d3App",[]);
             app.controller("myController" ,function($scope){
 
@@ -19,25 +42,6 @@ var app =  angular.module("d3App",[]);
                              $scope.opsMetrics = opsMetrics;
 
             });
-
-
-
-
-/*
-
-
-
-var app = angular.module('d3App', []);
-app.controller('myController',['$scope','$http', function($scope, $http) {
-    $http.get("opsMetrics.json").success(function(opsMetrics){
-       $scope.opsMetrics = opsMetrics;
-    });
-
-}]);
-
-
-
-
 
 
 
