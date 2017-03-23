@@ -15,6 +15,10 @@ var app1 = angular.module('d3App',[])
             $scope.data2 = resp2;
             console.log($scope.data2);
              });
+           $http.get('opsMetrics_info.json').success(function(resp3){
+            $scope.data3 = resp3;
+            console.log($scope.data3);
+             });
         });
 
 

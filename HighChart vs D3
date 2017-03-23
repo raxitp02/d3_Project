@@ -1,0 +1,27 @@
+
+
+HighCharts:
+
+HighCharts is amazing. Though the license is not commercially free but it’s worth the penny. I liked it especially because of the following reasons.
+Built using SVG which gives us the flexibility of applying CSS styles
+Easy to customize with a lot of options
+We created a bar-graph with the exact same design as it was provided by the client in the PSD — Worked well
+Easy Tooltip integration
+Easy to sync between different charts
+Highly documented
+Supports a wide-range of standard plotting
+What we didn’t like
+Doesn’t have cross-filter. By cross-filter I mean, few other graphs provided an option which synced the dataset between different graphs on the page
+
+D3:
+
+D3 is the de-facto for JavaScript chartings. It’s amazing and it can be used to visualize a wide range of data-set. Good things include
+Built using SVG for easier customization
+Easy to plot non-standard visualization: It is not specific to Graphs or Charting and can be used for any type of visualization. As the name itself suggests, it is more of “data driven documents”
+Highly customizable because of it’s low-level API
+Liked dc.js (http://dc-js.github.io/dc.js/) — Built on top of D3, something like HighCharts but less documented. Has cross-filter between the graphs
+What I didn’t like (especially for my use-case)
+Too low level
+It’s like re-inventing the wheel
+Conclusion
+If you’re looking for a non-standard visualization or a true Open source solution, you should use D3. For something commercial with a known standard type of plotting, you should use HighCharts.

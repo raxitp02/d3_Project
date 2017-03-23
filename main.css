@@ -17,6 +17,7 @@ h1 {
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
+   
 }
 .zui-table thead th {
     background-color: #DDEFEF;
@@ -44,7 +45,11 @@ h1 {
     border-left: none;
     border-right: none;
 }
-
+.table-responsive
+{
+    overflow-x: auto;
+}
+/* Graph Body */
 
 
 

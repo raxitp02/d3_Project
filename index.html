@@ -18,42 +18,25 @@
 <h1> GSSP Tenants Adoption and Metrics Dashboard </h1>
 <div ng-controller = "myController">
     <div id='main-table-body' class = "table-main-div-body" >
-          <table id="table-body" class="zui-table zui-table-zebra zui-table-horizontal">
-            <thead>
-              <tr>
-                  <th> GSP </th>
-                  <th> SystemA vailability </th>
-                  <th> Production Incidents </th>
-                  <th> ProdIncidents YTD </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat = "opsMetric in data">
-                  <td> {{ opsMetric.opsGSP }} </td>
-                  <td> {{ opsMetric.SystemAvailability }} </td>
-                  <td> {{ opsMetric.ProductionIncidents }} </td>
-                  <td> {{ opsMetric.ProdIncidentsYTD }} </td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-
- </br></br>
-<!-- Created Business Metrics Table-->
+        
+        <!-- Created Business Metrics Table-->
   
-    <div id='main-table-body1' class = "table-main-div-body">
+        <div id='main-table-body1' class = "table-main-div-body">
           <table id="table-body1" class="zui-table zui-table-zebra zui-table-horizontal">
             <thead>
+              <tr class= "table-title">
+                   <th colspan="9">Business Metrics </th>
+              </tr>
               <tr>
-                  <th> LaunchTime Frame </th>
+                  <th> Launch Time Frame </th>
                   <th> Channel </th>
                   <th> GSP </th>
-                  <th> ProgramtoDate </th>
+                  <th> Program to Date </th>
                   <th> Quotes </th>
                   <th> Apps </th>
-                  <th> QuotetoAppConversionRate </th>
-                  <th> IssuedPremiumUSD </th>
-                  <th> #_Agents_Using_Platform </th>
+                  <th> Quote to App Conversion Rate </th>
+                  <th> Issued Premium USD </th>
+                  <th> #Agents Using Platform </th>
               </tr>
             </thead>
             <tbody>
@@ -70,15 +53,17 @@
               </tr>
             </tbody>
           </table>
-    </div>
-
-    </br></br>
-<!-- Created Business Metrics Table2-->
+        </div>
+</br></br>
+      <!-- Created Business Metrics Table2-->
     <div id='main-table-body2' class = "table-main-div-body">
           <table id="table-body2" class="zui-table zui-table-zebra zui-table-horizontal">
             <thead>
+             <tr class= "table-title">
+                   <th colspan="6">Business Metrics </th>
+              </tr>
               <tr>
-                  <th> LaunchTimeFrame </th>
+                  <th> Launch Time Frame </th>
                   <th> Channel </th>
                   <th> GSvP </th>
                   <th> Register </th>
@@ -98,11 +83,86 @@
             </tbody>
           </table>
     </div>
+    
+<!--Ops Metrics Created Here -->
+    </br></br>
+
+       <div id='main-table-body' class = "table-main-div-body" >
+          <table id="table-body" class="zui-table zui-table-zebra zui-table-horizontal" >
+            <thead>
+               <tr class= "table-title">
+                   <th colspan="4">Ops Metrics </th>
+               </tr>
+              <tr>
+                  <th> GSP </th>
+                  <th> SystemA vailability </th>
+                  <th> Production Incidents </th>
+                  <th> ProdIncidents YTD </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "opsMetric in data">
+                  <td> {{ opsMetric.opsGSP }} </td>
+                  <td> {{ opsMetric.SystemAvailability }} </td>
+                  <td> {{ opsMetric.ProductionIncidents }} </td>
+                  <td> {{ opsMetric.ProdIncidentsYTD }} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+ </br></br>
+
+       <div id='main-table-body' class = "table-main-div-body" >
+          <table id="table-body" class="zui-table zui-table-zebra zui-table-horizontal" >
+            <thead>
+               <tr class= "table-title">
+                   <th colspan="4">Ops Metrics </th>
+               </tr>
+              <tr>
+                  <th> GSP </th>
+                  <th> SystemA vailability </th>
+                  <th> Production Incidents </th>
+                  <th> ProdIncidents YTD </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "opsMetric_info in data3">
+                  <td> {{ opsMetric_info.opsGSP }} </td>
+                  <td> {{ opsMetric_info.SystemAvailability }} </td>
+                  <td> {{ opsMetric_info.ProductionIncidents }} </td>
+                  <td> {{ opsMetric_info.ProdIncidentsYTD }} </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    
+    <!-- Graph Body Starts From Here-->
+
+            <div id="table-graph">
+                  <dir class="grapha-body">
+
+                  </dir>
+                  <dir class="grapha-body">
+
+                  </dir>
+                  <dir class="grapha-body">
+
+                  </dir>
+                  <dir class="grapha-body">
+
+                  </dir>
+                  <dir class="grapha-body">
+
+                  </dir>
+
+            </div>
+    
+    
 </div>
  
 
-
-</div>
 
 <script src="main.js"></script>
 </body>

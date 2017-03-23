@@ -33,26 +33,6 @@
   "SystemAvailability": "100%",
   "ProductionIncidents": 2,
   "ProdIncidentsYTD": 27
-}, {
-  "opsGSP": "US/Expat",
-  "SystemAvailability": "100%",
-  "ProductionIncidents": 0,
-  "ProdIncidentsYTD": 6
-}, {
-  "opsGSP": "China",
-  "SystemAvailability": "100%",
-  "ProductionIncidents": 2,
-  "ProdIncidentsYTD": 66
-}, {
-  "opsGSP": "Turkey",
-  "SystemAvailability": "100%",
-  "ProductionIncidents": 0,
-  "ProdIncidentsYTD": 1
-}, {
-  "opsGSP": "Italy",
-  "SystemAvailability": "99.70%",
-  "ProductionIncidents": 0,
-  "ProdIncidentsYTD": 2
 }]
 
 

@@ -1,0 +1,13 @@
+http://jsfiddle.net/johnwun/6bQA8/
+http://fiddle.jshell.net/erkin092/f3mo6o2g/
+
+http://www.ng-newsletter.com/posts/d3-on-angular.html
+
+
+https://github.com/EpiphanyMachine/d3AngularIntegration
+
+https://www.sitepoint.com/creating-charting-directives-using-angularjs-d3-js/
+
+https://blog.logentries.com/2014/07/combine-d3-with-angularjs/
+
+https://github.com/WealthBar/angular-d3
