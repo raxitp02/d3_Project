@@ -11,3 +11,5 @@ https://www.sitepoint.com/creating-charting-directives-using-angularjs-d3-js/
 https://blog.logentries.com/2014/07/combine-d3-with-angularjs/
 
 https://github.com/WealthBar/angular-d3
+
+Donut CHart:  http://www.adeveloperdiary.com/d3-js/create-a-simple-donut-chart-using-d3-js/

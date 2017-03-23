@@ -1,6 +1,4 @@
-
-
-angular.module('d3App', []).
+angular.module('myApp', []).
    //camel cased directive name
    //in your HTML, this will be named as bars-chart
    directive('barsChart', function ($parse) {
