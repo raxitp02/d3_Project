@@ -1,4 +1,4 @@
-
+/*
 
 angular.module('d3App', []).
    //camel cased directive name
@@ -44,3 +44,5 @@ angular.module('d3App', []).
 function Ctrl($scope) {
     $scope.myData = [10,20,30,40,60];
 }
+
+*/
